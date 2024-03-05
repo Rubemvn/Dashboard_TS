@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import GlobalStyles from "@/styles/GlobalStyles";
@@ -14,9 +13,9 @@ export async function generateMetadata() {
 }
 
 export default function RootLayout({
-	children,
+	dashboard,
 }: Readonly<{
-	children: React.ReactNode;
+	dashboard: React.ReactNode;
 }>) {
 	return (
 		<>
@@ -36,7 +35,7 @@ export default function RootLayout({
 						rel='stylesheet'
 					/>
 				</head>
-				<body>{children}</body>
+				<body>{dashboard}</body>
 			</html>
 		</>
 	);
