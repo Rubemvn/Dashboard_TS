@@ -18,7 +18,7 @@ body{
 }
 
 *, button, input {
-  border: 0;
+  border: 1;
   outline: 0;
   font-family: 'Inter', 'Roboto';
 }
