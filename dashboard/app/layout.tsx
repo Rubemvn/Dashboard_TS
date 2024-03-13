@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import GlobalStyles from "@/styles/GlobalStyles";
+import StyledComponentsRegistry from "./registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,25 +18,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<>
-			<GlobalStyles />
-			<html lang='pt-br'>
-				<head>
-					<link
-						rel='preconnect'
-						href='https://fonts.googleapis.com'
-					/>
-					<link
-						rel='preconnect'
-						href='https://fonts.gstatic.com'
-					/>
-					<link
-						href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'
-						rel='stylesheet'
-					/>
-				</head>
-				<body>{children}</body>
-			</html>
-		</>
+		<html lang='pt-br'>
+			<body>
+				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+			</body>
+		</html>
 	);
 }

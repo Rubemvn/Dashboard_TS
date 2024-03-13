@@ -1,8 +1,9 @@
 "use client";
-import Aside from "@/components/Aside";
 import Layout from "@/components/Layout";
-import Link from "next/link";
-import React from "react";
+import GlobalStyles from "@/styles/GlobalStyles";
+import dark from "@/styles/themes/dark";
+import light from "@/styles/themes/light";
+import { ThemeProvider } from "styled-components";
 
 const page = ({
 	children,
@@ -10,9 +11,12 @@ const page = ({
 	children: React.ReactNode;
 }>) => {
 	return (
-		<main>
-			<Layout />
-		</main>
+		<ThemeProvider theme={dark}>
+			<GlobalStyles />
+			<main>
+				<Layout />
+			</main>
+		</ThemeProvider>
 	);
 };
 
