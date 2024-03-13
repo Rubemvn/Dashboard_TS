@@ -12,7 +12,6 @@ const page = ({
 	return (
 		<main>
 			<Layout />
-			{children}
 		</main>
 	);
 };
