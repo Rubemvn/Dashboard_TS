@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	h1 {
-		color: red;
-	}
+	grid-area: CT;
+	background-color: blueviolet;
+	color: #fffd;
 `;

@@ -13,9 +13,9 @@ export async function generateMetadata() {
 }
 
 export default function RootLayout({
-	dashboard,
+	children,
 }: Readonly<{
-	dashboard: React.ReactNode;
+	children: React.ReactNode;
 }>) {
 	return (
 		<>
@@ -35,7 +35,7 @@ export default function RootLayout({
 						rel='stylesheet'
 					/>
 				</head>
-				<body>{dashboard}</body>
+				<body>{children}</body>
 			</html>
 		</>
 	);
