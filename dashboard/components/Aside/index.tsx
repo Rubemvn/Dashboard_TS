@@ -1,11 +1,17 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, Header, LogImg, Title } from "./styles";
 
 const Aside: React.FC = () => {
 	return (
 		<Container>
-			<h1>Aside</h1>
+			<Header>
+				<LogImg
+					src='@/components/Aside/Dollar-sign.svg'
+					alt={"Logo Minha Carteira"}
+				/>
+				<Title>Minha Carteira</Title>
+			</Header>
 		</Container>
 	);
 };
