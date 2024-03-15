@@ -1,0 +1,26 @@
+{
+	"editor.fontFamily": "'Jetbrains Mono', 'Cascadia Code', 'Operator Mono', 'Fira Code', 'Menlo', 'monospace'",
+	"editor.tabSize": 2,
+	"editor.fontSize": 14,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"entity.name.type.class", //class names
+					"constant", //String, Number, Boolean…, this, super
+					"storage.modifier", //static keyword
+					"storage.type.class.js", //class keyword
+					"keyword",
+					"entity.name.class.components.js",
+					"entity.name.class.components.jsx",
+					"entity.name.class.component.ts",
+					"entity.name.class.component.tsx"
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			}
+		]
+	}
+}
