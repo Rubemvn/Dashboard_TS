@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 export async function generateMetadata() {
 	return {
@@ -9,7 +10,13 @@ export async function generateMetadata() {
 }
 
 const page = () => {
-	return <div>page</div>;
+	return;
+	<>
+		<Head>
+			<title>teste</title>
+		</Head>
+		<div>page</div>;
+	</>;
 };
 
 export default page;

@@ -14,8 +14,8 @@ export const ToggleLabel = styled.span`
 
 export const ToggleSelector = styled(Switch).attrs<ReactSwitchProps>(
 	({ theme }) => ({
-		onColor: theme.colors.info,
-		offColor: theme.colors.primary,
+		onColor: theme.colors.gray,
+		offColor: theme.colors.graySecondary,
 		handleDiameter: 26,
 		height: 22,
 		width: 54,

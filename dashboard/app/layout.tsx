@@ -1,16 +1,18 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StyledComponentsRegistry from "./registry";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata() {
-	return {
-		title: "Minha Carteira",
-		description:
-			"Controle financeiro simplificado e eficiente em uma interface intuitiva.",
-	};
-}
+export const metadata: Metadata = {
+	title: "Minha Carteira",
+	description:
+		"Controle financeiro simplificado e eficiente em uma interface intuitiva.",
+	icons: {
+		icon: ["/images/DollarSign.svg?v=4"],
+	},
+};
 
 export default function RootLayout({
 	children,

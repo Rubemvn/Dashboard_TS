@@ -12,6 +12,7 @@ declare module "styled-components" {
 			white: string;
 			black: string;
 			gray: string;
+			graySecondary: string;
 
 			sucess: string;
 			info: string;

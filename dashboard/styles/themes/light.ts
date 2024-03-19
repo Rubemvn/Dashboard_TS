@@ -9,9 +9,10 @@ export default {
 		white: "#fff",
 		black: "#000",
 		gray: "#bfbfbf",
+		graySecondary: "#313131",
 
-		sucess: "#03BB85",
-		info: "#3B5998",
-		warning: "#E44C4E",
+		sucess: "#00CC45",
+		info: "#657CAD",
+		warning: "#DD5C5E",
 	},
 };

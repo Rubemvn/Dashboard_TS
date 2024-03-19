@@ -13,6 +13,7 @@ const page = ({
 	return (
 		<ThemeProvider theme={dark}>
 			<GlobalStyles />
+
 			<main>
 				<Layout />
 			</main>
