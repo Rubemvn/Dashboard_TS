@@ -10,13 +10,11 @@ export async function generateMetadata() {
 }
 
 const page = () => {
-	return;
-	<>
-		<Head>
-			<title>teste</title>
-		</Head>
-		<div>page</div>;
-	</>;
+	return (
+		<>
+			<h1>Dashboard</h1>;
+		</>
+	);
 };
 
 export default page;

@@ -1,11 +1,17 @@
 import React from "react";
 
 import { Container } from "./styles";
+import ContentHeader from "../ContentHeader";
 
-const Content: React.FC = () => {
+const Content = ({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) => {
 	return (
 		<Container>
-			<h1>Content</h1>
+			<ContentHeader />
+			{children}
 		</Container>
 	);
 };

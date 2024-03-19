@@ -15,7 +15,7 @@ const page = ({
 			<GlobalStyles />
 
 			<main>
-				<Layout />
+				<Layout>{children}</Layout>
 			</main>
 		</ThemeProvider>
 	);
