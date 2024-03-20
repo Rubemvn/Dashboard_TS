@@ -2,11 +2,10 @@
 
 import React from "react";
 import ContentHeader from "../ContentHeader";
+import SelectInput from "../SelectInput";
 import { Container } from "./styles";
 
-import SelectInput from "../SelectInput";
-
-const Dashboard: React.FC = () => {
+const List: React.FC = () => {
 	const options = [
 		{ value: "Rúbem", label: "Rúbem" },
 		{ value: "Hariely", label: "Hariely" },
@@ -16,12 +15,12 @@ const Dashboard: React.FC = () => {
 	return (
 		<Container>
 			<ContentHeader
-				title={"Dashboard"}
-				lineColor='#3B5998'>
+				title={"Entradas"}
+				lineColor='#03BB85'>
 				<SelectInput options={options} />
 			</ContentHeader>
 		</Container>
 	);
 };
 
-export default Dashboard;
+export default List;
