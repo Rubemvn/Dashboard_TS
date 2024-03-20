@@ -8,12 +8,7 @@ const Content = ({
 }: Readonly<{
 	children: React.ReactNode;
 }>) => {
-	return (
-		<Container>
-			<ContentHeader />
-			{children}
-		</Container>
-	);
+	return <Container>{children}</Container>;
 };
 
 export default Content;

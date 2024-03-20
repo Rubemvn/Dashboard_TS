@@ -1,5 +1,4 @@
-import React from "react";
-import Head from "next/head";
+import Dashboard from "@/components/Dashboard";
 
 export async function generateMetadata() {
 	return {
@@ -10,11 +9,7 @@ export async function generateMetadata() {
 }
 
 const page = () => {
-	return (
-		<>
-			<h1>Dashboard</h1>;
-		</>
-	);
+	return <Dashboard />;
 };
 
 export default page;
