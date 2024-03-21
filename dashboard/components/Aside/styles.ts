@@ -43,11 +43,12 @@ export const MenuItemLink = styled(Link)`
 	font-weight: 500;
 	margin: 7px 0;
 
-	transition: all 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
 
 	cursor: pointer;
 
 	&:hover {
 		opacity: 0.7;
+		transform: translateX(5px);
 	}
 `;

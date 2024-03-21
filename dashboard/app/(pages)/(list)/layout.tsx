@@ -8,8 +8,12 @@ export async function generateMetadata() {
 	};
 }
 
-const page = () => {
-	return <List />;
+const page = ({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) => {
+	return <List>{children}</List>;
 };
 
 export default page;

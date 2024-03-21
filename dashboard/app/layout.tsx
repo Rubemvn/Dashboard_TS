@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
+import GlobalStyles from "@/styles/GlobalStyles";
 import "./globals.css";
 import StyledComponentsRegistry from "./registry";
 import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+// import { Inter } from "next/font/google";
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Minha Carteira",
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pt-br'>
+			<GlobalStyles />
 			<body>
 				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 			</body>

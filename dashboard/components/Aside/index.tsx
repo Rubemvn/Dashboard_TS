@@ -2,8 +2,10 @@
 import logo from "@/public/images/DollarSign.svg";
 import logoDark from "@/public/images/DollarSign-dark.svg";
 
+// Icons
 import { MdOutlineSpaceDashboard, MdExitToApp } from "react-icons/md";
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
+import { RiPlayListAddLine } from "react-icons/ri";
 
 // styled Components
 import {
@@ -28,19 +30,23 @@ const Aside: React.FC = () => {
 			</Header>
 
 			<MenuContainer>
-				<MenuItemLink href='#'>
+				<MenuItemLink href='/dashboard'>
 					<MdOutlineSpaceDashboard />
 					Dashboard
 				</MenuItemLink>
-				<MenuItemLink href='#'>
+				<MenuItemLink href='/add-item'>
+					<RiPlayListAddLine />
+					Adicionar Registro
+				</MenuItemLink>
+				<MenuItemLink href='/entry-balance'>
 					<FaArrowCircleUp />
 					Entradas
 				</MenuItemLink>
-				<MenuItemLink href='#'>
+				<MenuItemLink href='exits-balance'>
 					<FaArrowCircleDown />
 					Saídas
 				</MenuItemLink>
-				<MenuItemLink href='#'>
+				<MenuItemLink href='/'>
 					<MdExitToApp />
 					Sair
 				</MenuItemLink>
