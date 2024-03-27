@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useMemo, useState } from "react";
 import ContentHeader from "../ContentHeader";
 import SelectInput from "../SelectInput";
 import { Container, Content, Filters } from "./styles";
-import HistoryFinanceCard from "../HistoryFinanceCard";
 
 const List = ({
 	children,
@@ -23,11 +22,24 @@ const List = ({
 		{ value: 2022, label: 2022 },
 	];
 
+	const [title, setTitle] = useState("");
+
+	const setTitleForChild = (newTitle: any) => {
+		setTitle(newTitle);
+	};
+
+	const childrenWithProps = React.Children.map(children, (child) => {
+		if (React.isValidElement(child)) {
+			return React.cloneElement(child, { setTitle: setTitleForChild });
+		}
+		return child;
+	});
+
 	return (
 		<Container>
 			<ContentHeader
-				title={"Entradas"}
-				lineColor='#03BB85'>
+				title={title}
+				linecolor='#03BB85'>
 				<SelectInput options={months} />
 				<SelectInput options={years} />
 			</ContentHeader>
@@ -45,10 +57,7 @@ const List = ({
 				</button>
 			</Filters>
 
-			<Content>
-				{children}
-				{/*  */}
-			</Content>
+			<Content>{childrenWithProps}</Content>
 		</Container>
 	);
 };
