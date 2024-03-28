@@ -4,6 +4,7 @@ interface ISelectInputProps {
 	options: {
 		value: string | number;
 		label: string | number;
+		key: string | number;
 	}[];
 }
 
@@ -12,7 +13,12 @@ const SelectInput: React.FC<ISelectInputProps> = ({ options }) => {
 		<Container>
 			<select>
 				{options.map((option) => (
-					<option value={option.value}> {option.label}</option>
+					<option
+						key={option.key}
+						value={option.value}>
+						{" "}
+						{option.label}
+					</option>
 				))}
 			</select>
 		</Container>

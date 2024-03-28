@@ -1,39 +1,26 @@
 "use client";
-
-import React, { useMemo, useState } from "react";
 import ContentHeader from "../ContentHeader";
 import SelectInput from "../SelectInput";
 import { Container, Content, Filters } from "./styles";
 
 const List = ({
 	children,
+	title,
 }: Readonly<{
 	children: React.ReactNode;
+	title: string;
 }>) => {
 	const months = [
-		{ value: 1, label: "Janeiro" },
-		{ value: 2, label: "Fevereiro" },
-		{ value: 3, label: "Março" },
+		{ value: 1, label: "Janeiro", key: 1 },
+		{ value: 2, label: "Fevereiro", key: 2 },
+		{ value: 3, label: "Março", key: 3 },
 	];
 
 	const years = [
-		{ value: 2024, label: 2024 },
-		{ value: 2023, label: 2023 },
-		{ value: 2022, label: 2022 },
+		{ value: 2024, label: 2024, key: 1 },
+		{ value: 2023, label: 2023, key: 2 },
+		{ value: 2022, label: 2022, key: 3 },
 	];
-
-	const [title, setTitle] = useState("");
-
-	const setTitleForChild = (newTitle: any) => {
-		setTitle(newTitle);
-	};
-
-	const childrenWithProps = React.Children.map(children, (child) => {
-		if (React.isValidElement(child)) {
-			return React.cloneElement(child, { setTitle: setTitleForChild });
-		}
-		return child;
-	});
 
 	return (
 		<Container>
@@ -57,7 +44,7 @@ const List = ({
 				</button>
 			</Filters>
 
-			<Content>{childrenWithProps}</Content>
+			<Content>{children}</Content>
 		</Container>
 	);
 };

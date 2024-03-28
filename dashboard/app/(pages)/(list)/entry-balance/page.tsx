@@ -1,16 +1,7 @@
 "use client";
 import HistoryFinanceCard from "@/components/HistoryFinanceCard";
-import { useEffect } from "react";
 
-interface IPageProps {
-	setTitle: (newTitle: string) => void;
-}
-
-const page = ({ setTitle }: IPageProps) => {
-	useEffect(() => {
-		setTitle("Entrada");
-	}, []);
-
+const page = () => {
 	return (
 		<>
 			<HistoryFinanceCard

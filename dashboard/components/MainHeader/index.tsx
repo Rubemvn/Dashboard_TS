@@ -10,8 +10,9 @@ const MainHeader = () => {
 		const indice = Math.floor(Math.random() * emojis.length);
 		return emojis[indice];
 	}, []);
+
 	return (
-		<Container>
+		<Container suppressHydrationWarning={true}>
 			<Toggle />
 			<Profile>
 				<Welcome>Olá, {emoji}</Welcome>
